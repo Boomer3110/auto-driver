@@ -3,4 +3,3 @@ pandas
 pydrive
 asyncio
 youtube_dl
-dotenv
