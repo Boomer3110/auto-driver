@@ -6,8 +6,11 @@ from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 import asyncio
 from youtube_dl import YoutubeDL
+from dotenv import load_dotenv
 from pandas import *
 
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 
 gauth = GoogleAuth()
@@ -526,4 +529,4 @@ async def videos(ctx):
             await ctx.reply ("No videos in this folder.")
 
 
-bot.run(os.environ["DISCORD_TOKEN"])
+bot.run(TOKEN)
